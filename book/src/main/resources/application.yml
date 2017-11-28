@@ -1,0 +1,15 @@
+server:
+  port: 8090
+  maxHttpHeaderSize: 65536
+  tomcat:
+    basedir:
+    accesslog:
+      enabled: true
+      prefix: access
+      pattern: '%h %t "%r" %s %b %D "%{Referer}i" "%{User-agent}i" "%{X-Requested-By}i" "%{X-B3-TraceId}i"'
+
+spring:
+  application.name: book
+
+logging:
+  config: classpath:logback-spring.xml
