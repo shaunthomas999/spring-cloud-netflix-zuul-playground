@@ -1,5 +1,5 @@
 server:
-  port: 8090
+  port: 8091
   maxHttpHeaderSize: 65536
   tomcat:
     basedir:
@@ -9,7 +9,7 @@ server:
       pattern: '%h %t "%r" %s %b %D "%{Referer}i" "%{User-agent}i" "%{X-Requested-By}i" "%{X-B3-TraceId}i" "%{myHeader}i"'
 
 spring:
-  application.name: book
+  application.name: shelf
 
 logging:
   config: classpath:logback-spring.xml

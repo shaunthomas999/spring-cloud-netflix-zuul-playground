@@ -6,10 +6,15 @@ server:
     accesslog:
       enabled: true
       prefix: access
-      pattern: '%h %t "%r" %s %b %D "%{Referer}i" "%{User-agent}i" "%{X-Requested-By}i" "%{X-B3-TraceId}i"'
+      pattern: '%h %t "%r" %s %b %D "%{Referer}i" "%{User-agent}i" "%{X-Requested-By}i" "%{X-B3-TraceId}i" "%{myHeader}i"'
 
 zuul:
   routes.books.url: http://localhost:8090
+  retryable: true
+  ignoredServices: '*'
+  SendErrorFilter:
+    error:
+      disable: true
 
 ribbon:
   eureka.enabled: false
