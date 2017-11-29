@@ -34,7 +34,7 @@
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-sleuth</artifactId>
-      <!--<version>${spring-cloud-sleuth.version}</version>-->
+      <version>${spring-cloud-sleuth.version}</version>
     </dependency>
     <dependency>
       <groupId>net.logstash.logback</groupId>

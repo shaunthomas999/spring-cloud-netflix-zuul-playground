@@ -1,10 +1,11 @@
 package hello;
 
+import hello.filters.pre.HeaderToAppLogFilter;
+import hello.filters.pre.SimpleFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
-import hello.filters.pre.SimpleFilter;
 
 @EnableZuulProxy
 @SpringBootApplication
@@ -17,6 +18,11 @@ public class GatewayApplication {
   @Bean
   public SimpleFilter simpleFilter() {
     return new SimpleFilter();
+  }
+
+  @Bean
+  public HeaderToAppLogFilter headerToAppLogFilter() {
+    return new HeaderToAppLogFilter();
   }
 
 }

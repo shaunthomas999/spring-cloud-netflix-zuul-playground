@@ -35,7 +35,7 @@
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-sleuth</artifactId>
-      <!--<version>${spring-cloud-sleuth.version}</version>-->
+      <version>${spring-cloud-sleuth.version}</version>
     </dependency>
     <dependency>
       <groupId>net.logstash.logback</groupId>
@@ -55,11 +55,11 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-sleuth-core</artifactId>
-      <version>1.2.4.RELEASE</version>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.springframework.cloud</groupId>-->
+      <!--<artifactId>spring-cloud-sleuth-core</artifactId>-->
+      <!--<version>1.2.4.RELEASE</version>-->
+    <!--</dependency>-->
   </dependencies>
 
   <dependencyManagement>
